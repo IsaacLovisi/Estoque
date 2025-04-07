@@ -36,4 +36,4 @@ Este é um projeto simples de **controle de estoque**, desenvolvido em Python co
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone https://github.com/IsaacLovisi/Estoque
