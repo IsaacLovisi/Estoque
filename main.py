@@ -58,12 +58,33 @@ def listar_produtos():
     else:
         print("Nenhum produto cadastrado")
 
-def atualizar_produtos(cod, quantidade, preco):
-    match cod:
-        case 1:         
-            cursor.execute("UPDATE produtos SET produtos(quantidade) VALUE (?) ", (quantidade))
+def atualizar_produto():
+    id_produto = int(input("Informe o ID do produto: "))
+    print("1 - Atualizar quantidade")
+    print("2 - Atualizar preço")
+    opcao = int(input("Escolha a opção: "))
+
+    match opcao:
+        case 1:
+            novo_valor = int(input("Nova quantidade: "))
+            cursor.execute("UPDATE produtos SET quantidade = ? WHERE id = ?", (novo_valor, id_produto))
         case 2:
-            cursor.execute("Update produtos SET produtos(preco) VALUE (?)", (preco))
+            novo_valor = float(input("Novo preço: "))
+            cursor.execute("UPDATE produtos SET preco = ? WHERE id = ?", (novo_valor, id_produto))
+        case _:
+            print("Opção inválida.")
+            return
 
+    conn.commit()
+    print("Produto atualizado com sucesso!")
 
+def inicio():
+    print("-" * 42)
+    print("|          BEM VINDO AO ESTOQUE          |")
+    print("¯" * 42)
+    opcao = int(input("1 - Produtos\n2 - Logs\n3 - Área de Acesso\n:"))
+    match opcao:
+        case 1:
+            print("-" * 42)
 
+inicio()
