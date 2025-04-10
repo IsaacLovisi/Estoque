@@ -8,7 +8,7 @@ Este é um projeto simples de **controle de estoque**, desenvolvido em Python co
 
 - ✅ Cadastro de produtos com nome, quantidade e preço  
 - ✅ Listagem de produtos cadastrados  
-- 🔄 Atualização de informações de estoque
+- ✅Atualização de informações de estoque
 - 🔐 Registro de usuários e logs de ações (estrutura pronta)
 
 ---
@@ -25,7 +25,6 @@ Este é um projeto simples de **controle de estoque**, desenvolvido em Python co
 
 > Em desenvolvimento. Algumas melhorias previstas:
 
-- Finalizar função de atualização de produtos
 - Implementar autenticação de usuários
 - Melhorar interface com menus interativos no terminal
 - Adicionar logs de ações dos usuários
